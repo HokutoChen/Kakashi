@@ -18,5 +18,11 @@ class First(commands.Cog):
         .set_footer(text=f"{self.bot.user.name} was created on {self.bot.user.created_at.strftime('%c')}")
         )
 
+
+    @commands.command(alias=["h"])
+    async def help(selfself, ctx: commands.Context):
+        """Help test"""
+        await ctx.send(f"I don't provide help you fuck")
+
 def setup(bot: commands.AutoShardedBot):
     bot.add_cog(First(bot))
